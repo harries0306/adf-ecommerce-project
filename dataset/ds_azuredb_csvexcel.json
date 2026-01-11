@@ -1,0 +1,13 @@
+{
+	"name": "ds_azuredb_csvexcel",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_azuredb_csvexcel",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": []
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

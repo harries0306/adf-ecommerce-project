@@ -1,0 +1,9 @@
+{
+	"name": "dfecomdev",
+	"location": "malaysiawest",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "3f73a727-0ad9-44fe-af2a-016b18f20800",
+		"tenantId": "f970310b-e897-43f4-9d3b-7bb52ff9c0ce"
+	}
+}

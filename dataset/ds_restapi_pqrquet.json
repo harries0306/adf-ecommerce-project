@@ -1,0 +1,13 @@
+{
+	"name": "ds_restapi_pqrquet",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_restapi_pqrquet",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "RestResource",
+		"schema": []
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

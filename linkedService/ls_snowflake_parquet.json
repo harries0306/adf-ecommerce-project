@@ -1,0 +1,18 @@
+{
+	"name": "ls_snowflake_parquet",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "SnowflakeV2",
+		"typeProperties": {
+			"authenticationType": "Basic",
+			"accountIdentifier": "UWWYHJV-SO68802",
+			"user": "HARRIES",
+			"database": "DBAZURESNOW",
+			"warehouse": "COMPUTE_WH",
+			"useUtcTimestamps": false,
+			"encryptedCredential": "ew0KICAiVmVyc2lvbiI6ICIyMDE3LTExLTMwIiwNCiAgIlByb3RlY3Rpb25Nb2RlIjogIktleSIsDQogICJTZWNyZXRDb250ZW50VHlwZSI6ICJQbGFpbnRleHQiLA0KICAiQ3JlZGVudGlhbElkIjogIkRBVEFGQUNUT1JZQDIxODU1RjAzLTcxMTctNDZEQi1BMTcyLUMyNDVFNjRERTU0NV83ZjU0YjA2YS1mNzk1LTQzNjQtOTRmNC1kYjRjZGI3ZDQ0NWIiDQp9"
+		},
+		"version": "1.1"
+	}
+}

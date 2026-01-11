@@ -1,0 +1,12 @@
+{
+	"name": "ds_bulk_parquet_sink",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "AzureBlobFS",
+		"typeProperties": {
+			"url": "https://adlsecomprojectsrcdev.dfs.core.windows.net/",
+			"encryptedCredential": "ew0KICAiVmVyc2lvbiI6ICIyMDE3LTExLTMwIiwNCiAgIlByb3RlY3Rpb25Nb2RlIjogIktleSIsDQogICJTZWNyZXRDb250ZW50VHlwZSI6ICJQbGFpbnRleHQiLA0KICAiQ3JlZGVudGlhbElkIjogIkRBVEFGQUNUT1JZQDIxODU1RjAzLTcxMTctNDZEQi1BMTcyLUMyNDVFNjRERTU0NV9mOGY4MmM4Yy05NzEwLTQ4YWYtYTFmNC02YmNiYmQ1Yjc5MjciDQp9"
+		}
+	}
+}

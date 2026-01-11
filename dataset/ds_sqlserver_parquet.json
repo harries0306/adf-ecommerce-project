@@ -1,0 +1,55 @@
+{
+	"name": "ds_sqlserver_parquet",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_sqlserver_parquet",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "SqlServerTable",
+		"schema": [
+			{
+				"name": "order_id",
+				"type": "varchar"
+			},
+			{
+				"name": "customer_id",
+				"type": "varchar"
+			},
+			{
+				"name": "order_status",
+				"type": "varchar"
+			},
+			{
+				"name": "order_purchase_timestamp",
+				"type": "datetime2",
+				"scale": 7
+			},
+			{
+				"name": "order_approved_at",
+				"type": "datetime2",
+				"scale": 7
+			},
+			{
+				"name": "order_delivered_carrier_date",
+				"type": "datetime2",
+				"scale": 7
+			},
+			{
+				"name": "order_delivered_customer_date",
+				"type": "datetime2",
+				"scale": 7
+			},
+			{
+				"name": "order_estimated_delivery_date",
+				"type": "datetime2",
+				"scale": 7
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "olist_orders_dataset"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

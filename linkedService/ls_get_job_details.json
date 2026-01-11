@@ -1,0 +1,21 @@
+{
+	"name": "ls_get_job_details",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "AzureSqlDatabase",
+		"typeProperties": {
+			"server": "sql-srvr-ecom-dev.database.windows.net",
+			"database": "sql-db-vb-dev",
+			"encrypt": "mandatory",
+			"trustServerCertificate": false,
+			"authenticationType": "SQL",
+			"userName": "access-data-dev",
+			"encryptedCredential": "eyJDcmVkZW50aWFsSWQiOiI3NjNiMGYyZS1jNDRjLTQ4NDYtYTc3OC1hNTZlYmRjMDkwZDgiLCJWZXJzaW9uIjoiMi4wIiwiQ2xhc3NUeXBlIjoiTWljcm9zb2Z0LkRhdGFQcm94eS5Db3JlLkludGVyU2VydmljZURhdGFDb250cmFjdC5DcmVkZW50aWFsU1UwNkNZMTQifQ=="
+		},
+		"connectVia": {
+			"referenceName": "selfhosted-integrationRuntime1",
+			"type": "IntegrationRuntimeReference"
+		}
+	}
+}
