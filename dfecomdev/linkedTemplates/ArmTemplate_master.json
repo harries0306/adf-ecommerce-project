@@ -1,0 +1,501 @@
+{
+	"$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"type": "string",
+			"metadata": "Data Factory name",
+			"defaultValue": "dfecomdev"
+		},
+		"ds_bulk_parquet_sink_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'ds_bulk_parquet_sink'"
+		},
+		"ls_azure_sql_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'ls_azure_sql'"
+		},
+		"ls_azure_sr_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'ls_azure_sr'"
+		},
+		"ls_azuredb_csv_meta_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'ls_azuredb_csv_meta'"
+		},
+		"ls_azuredb_csvexcel_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'ls_azuredb_csvexcel'"
+		},
+		"ls_bulk_parquet_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'ls_bulk_parquet'"
+		},
+		"ls_csv_paquet_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'ls_csv_paquet'"
+		},
+		"ls_csv_parquet_sink_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'ls_csv_parquet_sink'"
+		},
+		"ls_excel_parquet_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'ls_excel_parquet'"
+		},
+		"ls_excel_parquet_sink_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'ls_excel_parquet_sink'"
+		},
+		"ls_get_job_details_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'ls_get_job_details'"
+		},
+		"ls_json_parquet_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'ls_json_parquet'"
+		},
+		"ls_json_parquet_sink_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'ls_json_parquet_sink'"
+		},
+		"ls_restapi_parquet_sink_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'ls_restapi_parquet_sink'"
+		},
+		"ls_sftp_parquet_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'ls_sftp_parquet'"
+		},
+		"ls_sftp_parquet_sink_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'ls_sftp_parquet_sink'"
+		},
+		"ls_snowflake_parquet_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'ls_snowflake_parquet'"
+		},
+		"ls_snowflake_src_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'ls_snowflake_src'"
+		},
+		"ls_snowflake_src_sink_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'ls_snowflake_src_sink'"
+		},
+		"ls_sqlserver_parquet_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'ls_sqlserver_parquet'"
+		},
+		"ls_sqlserver_parquet_sink_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'ls_sqlserver_parquet_sink'"
+		},
+		"ds_bulk_parquet_sink_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://adlsecomprojectsrcdev.dfs.core.windows.net/"
+		},
+		"ls_azure_sql_properties_typeProperties_server": {
+			"type": "string",
+			"defaultValue": "sql-srvr-ecom-dev.database.windows.net"
+		},
+		"ls_azure_sql_properties_typeProperties_database": {
+			"type": "string",
+			"defaultValue": "sql-db-vb-dev"
+		},
+		"ls_azure_sql_properties_typeProperties_userName": {
+			"type": "string",
+			"defaultValue": "access-data-dev"
+		},
+		"ls_azure_sr_properties_typeProperties_server": {
+			"type": "string",
+			"defaultValue": "sql-srvr-ecom-dev.database.windows.net"
+		},
+		"ls_azure_sr_properties_typeProperties_database": {
+			"type": "string",
+			"defaultValue": "sql-db-vb-dev"
+		},
+		"ls_azure_sr_properties_typeProperties_userName": {
+			"type": "string",
+			"defaultValue": "access-data-dev"
+		},
+		"ls_azuredb_csv_meta_properties_typeProperties_server": {
+			"type": "string",
+			"defaultValue": "sql-srvr-ecom-dev.database.windows.net"
+		},
+		"ls_azuredb_csv_meta_properties_typeProperties_database": {
+			"type": "string",
+			"defaultValue": "sql-db-vb-dev"
+		},
+		"ls_azuredb_csv_meta_properties_typeProperties_userName": {
+			"type": "string",
+			"defaultValue": "access-data-dev"
+		},
+		"ls_azuredb_csvexcel_properties_typeProperties_server": {
+			"type": "string",
+			"defaultValue": "sql-srvr-ecom-dev.database.windows.net"
+		},
+		"ls_azuredb_csvexcel_properties_typeProperties_database": {
+			"type": "string",
+			"defaultValue": "sql-db-vb-dev"
+		},
+		"ls_azuredb_csvexcel_properties_typeProperties_userName": {
+			"type": "string",
+			"defaultValue": "access-data-dev"
+		},
+		"ls_bulk_parquet_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://adlsecomprojectraw.dfs.core.windows.net/"
+		},
+		"ls_csv_paquet_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://adlsecomprojectraw.dfs.core.windows.net/"
+		},
+		"ls_csv_parquet_sink_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://adlsecomprojectsrcdev.dfs.core.windows.net/"
+		},
+		"ls_excel_parquet_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://adlsecomprojectraw.dfs.core.windows.net/"
+		},
+		"ls_excel_parquet_sink_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://adlsecomprojectsrcdev.dfs.core.windows.net/"
+		},
+		"ls_get_job_details_properties_typeProperties_server": {
+			"type": "string",
+			"defaultValue": "sql-srvr-ecom-dev.database.windows.net"
+		},
+		"ls_get_job_details_properties_typeProperties_database": {
+			"type": "string",
+			"defaultValue": "sql-db-vb-dev"
+		},
+		"ls_get_job_details_properties_typeProperties_userName": {
+			"type": "string",
+			"defaultValue": "access-data-dev"
+		},
+		"ls_json_parquet_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://adlsecomprojectraw.dfs.core.windows.net/"
+		},
+		"ls_json_parquet_sink_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://adlsecomprojectsrcdev.dfs.core.windows.net/"
+		},
+		"ls_restapi_parquet_sink_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://adlsecomprojectsrcdev.dfs.core.windows.net/"
+		},
+		"ls_restapi_pqrquet_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://retoolapi.dev/fPl4Jn/data"
+		},
+		"ls_sftp_parquet_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://adlsecomprojectraw.dfs.core.windows.net/"
+		},
+		"ls_sftp_parquet_sink_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://adlsecomprojectsrcdev.dfs.core.windows.net/"
+		},
+		"ls_snowflake_parquet_properties_typeProperties_database": {
+			"type": "string",
+			"defaultValue": "DBAZURESNOW"
+		},
+		"ls_snowflake_parquet_sink_sasUri": {
+			"type": "secureString",
+			"metadata": "Secure string for 'sasUri' of 'ls_snowflake_parquet_sink'"
+		},
+		"ls_snowflake_src_sink_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://adlsecomprojectsrcdev.dfs.core.windows.net/"
+		},
+		"ls_sqlserver_parquet_properties_typeProperties_server": {
+			"type": "string",
+			"defaultValue": "HARRIES"
+		},
+		"ls_sqlserver_parquet_properties_typeProperties_database": {
+			"type": "string",
+			"defaultValue": "ecomproject"
+		},
+		"ls_sqlserver_parquet_properties_typeProperties_userName": {
+			"type": "string",
+			"defaultValue": "harish"
+		},
+		"ls_sqlserver_parquet_sink_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://adlsecomprojectsrcdev.dfs.core.windows.net/"
+		},
+		"Tr_sample_csv_properties_PL1_MASTER_parameters_Trigger": {
+			"type": "string",
+			"defaultValue": "Tr_sample_csv"
+		},
+		"eventtrigger_properties_typeProperties_scope": {
+			"type": "string",
+			"defaultValue": "/subscriptions/8cba6eac-8148-40ab-811d-b65b0489221f/resourceGroups/rg_ecom_project/providers/Microsoft.Storage/storageAccounts/blobstorageecomprjdev"
+		},
+		"containerUri": {
+			"type": "string",
+			"metadata": "URI to storage account containing linked ARM templates"
+		},
+		"containerSasToken": {
+			"type": "string",
+			"metadata": "Sas token to storage account containing linked ARM templates"
+		}
+	},
+	"variables": {
+		"factoryId": "[concat('Microsoft.DataFactory/factories/', parameters('factoryName'))]"
+	},
+	"resources": [
+		{
+			"name": "dfecomdev_ArmTemplate_0",
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2024-03-01",
+			"properties": {
+				"mode": "incremental",
+				"templateLink": {
+					"uri": "[concat(parameters('containerUri'), '/ArmTemplate_0.json', parameters('containerSasToken'))]",
+					"contentVersion": "1.0.0.0"
+				},
+				"parameters": {
+					"factoryName": {
+						"value": "[parameters('factoryName')]"
+					},
+					"ds_bulk_parquet_sink_accountKey": {
+						"value": "[parameters('ds_bulk_parquet_sink_accountKey')]"
+					},
+					"ls_bulk_parquet_accountKey": {
+						"value": "[parameters('ls_bulk_parquet_accountKey')]"
+					},
+					"ls_csv_paquet_accountKey": {
+						"value": "[parameters('ls_csv_paquet_accountKey')]"
+					},
+					"ls_csv_parquet_sink_accountKey": {
+						"value": "[parameters('ls_csv_parquet_sink_accountKey')]"
+					},
+					"ls_excel_parquet_accountKey": {
+						"value": "[parameters('ls_excel_parquet_accountKey')]"
+					},
+					"ls_excel_parquet_sink_accountKey": {
+						"value": "[parameters('ls_excel_parquet_sink_accountKey')]"
+					},
+					"ls_json_parquet_accountKey": {
+						"value": "[parameters('ls_json_parquet_accountKey')]"
+					},
+					"ls_json_parquet_sink_accountKey": {
+						"value": "[parameters('ls_json_parquet_sink_accountKey')]"
+					},
+					"ls_restapi_parquet_sink_accountKey": {
+						"value": "[parameters('ls_restapi_parquet_sink_accountKey')]"
+					},
+					"ls_sftp_parquet_accountKey": {
+						"value": "[parameters('ls_sftp_parquet_accountKey')]"
+					},
+					"ls_sftp_parquet_sink_accountKey": {
+						"value": "[parameters('ls_sftp_parquet_sink_accountKey')]"
+					},
+					"ls_snowflake_parquet_password": {
+						"value": "[parameters('ls_snowflake_parquet_password')]"
+					},
+					"ls_snowflake_src_connectionString": {
+						"value": "[parameters('ls_snowflake_src_connectionString')]"
+					},
+					"ls_snowflake_src_sink_accountKey": {
+						"value": "[parameters('ls_snowflake_src_sink_accountKey')]"
+					},
+					"ls_sqlserver_parquet_sink_accountKey": {
+						"value": "[parameters('ls_sqlserver_parquet_sink_accountKey')]"
+					},
+					"ds_bulk_parquet_sink_properties_typeProperties_url": {
+						"value": "[parameters('ds_bulk_parquet_sink_properties_typeProperties_url')]"
+					},
+					"ls_bulk_parquet_properties_typeProperties_url": {
+						"value": "[parameters('ls_bulk_parquet_properties_typeProperties_url')]"
+					},
+					"ls_csv_paquet_properties_typeProperties_url": {
+						"value": "[parameters('ls_csv_paquet_properties_typeProperties_url')]"
+					},
+					"ls_csv_parquet_sink_properties_typeProperties_url": {
+						"value": "[parameters('ls_csv_parquet_sink_properties_typeProperties_url')]"
+					},
+					"ls_excel_parquet_properties_typeProperties_url": {
+						"value": "[parameters('ls_excel_parquet_properties_typeProperties_url')]"
+					},
+					"ls_excel_parquet_sink_properties_typeProperties_url": {
+						"value": "[parameters('ls_excel_parquet_sink_properties_typeProperties_url')]"
+					},
+					"ls_json_parquet_properties_typeProperties_url": {
+						"value": "[parameters('ls_json_parquet_properties_typeProperties_url')]"
+					},
+					"ls_json_parquet_sink_properties_typeProperties_url": {
+						"value": "[parameters('ls_json_parquet_sink_properties_typeProperties_url')]"
+					},
+					"ls_restapi_parquet_sink_properties_typeProperties_url": {
+						"value": "[parameters('ls_restapi_parquet_sink_properties_typeProperties_url')]"
+					},
+					"ls_restapi_pqrquet_properties_typeProperties_url": {
+						"value": "[parameters('ls_restapi_pqrquet_properties_typeProperties_url')]"
+					},
+					"ls_sftp_parquet_properties_typeProperties_url": {
+						"value": "[parameters('ls_sftp_parquet_properties_typeProperties_url')]"
+					},
+					"ls_sftp_parquet_sink_properties_typeProperties_url": {
+						"value": "[parameters('ls_sftp_parquet_sink_properties_typeProperties_url')]"
+					},
+					"ls_snowflake_parquet_properties_typeProperties_database": {
+						"value": "[parameters('ls_snowflake_parquet_properties_typeProperties_database')]"
+					},
+					"ls_snowflake_parquet_sink_sasUri": {
+						"value": "[parameters('ls_snowflake_parquet_sink_sasUri')]"
+					},
+					"ls_snowflake_src_sink_properties_typeProperties_url": {
+						"value": "[parameters('ls_snowflake_src_sink_properties_typeProperties_url')]"
+					},
+					"ls_sqlserver_parquet_sink_properties_typeProperties_url": {
+						"value": "[parameters('ls_sqlserver_parquet_sink_properties_typeProperties_url')]"
+					}
+				}
+			},
+			"dependsOn": []
+		},
+		{
+			"name": "dfecomdev_ArmTemplate_1",
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2024-03-01",
+			"properties": {
+				"mode": "incremental",
+				"templateLink": {
+					"uri": "[concat(parameters('containerUri'), '/ArmTemplate_1.json', parameters('containerSasToken'))]",
+					"contentVersion": "1.0.0.0"
+				},
+				"parameters": {
+					"factoryName": {
+						"value": "[parameters('factoryName')]"
+					},
+					"ls_azure_sql_password": {
+						"value": "[parameters('ls_azure_sql_password')]"
+					},
+					"ls_azure_sr_password": {
+						"value": "[parameters('ls_azure_sr_password')]"
+					},
+					"ls_azuredb_csv_meta_password": {
+						"value": "[parameters('ls_azuredb_csv_meta_password')]"
+					},
+					"ls_azuredb_csvexcel_password": {
+						"value": "[parameters('ls_azuredb_csvexcel_password')]"
+					},
+					"ls_get_job_details_password": {
+						"value": "[parameters('ls_get_job_details_password')]"
+					},
+					"ls_azure_sql_properties_typeProperties_server": {
+						"value": "[parameters('ls_azure_sql_properties_typeProperties_server')]"
+					},
+					"ls_azure_sql_properties_typeProperties_database": {
+						"value": "[parameters('ls_azure_sql_properties_typeProperties_database')]"
+					},
+					"ls_azure_sql_properties_typeProperties_userName": {
+						"value": "[parameters('ls_azure_sql_properties_typeProperties_userName')]"
+					},
+					"ls_azure_sr_properties_typeProperties_server": {
+						"value": "[parameters('ls_azure_sr_properties_typeProperties_server')]"
+					},
+					"ls_azure_sr_properties_typeProperties_database": {
+						"value": "[parameters('ls_azure_sr_properties_typeProperties_database')]"
+					},
+					"ls_azure_sr_properties_typeProperties_userName": {
+						"value": "[parameters('ls_azure_sr_properties_typeProperties_userName')]"
+					},
+					"ls_azuredb_csv_meta_properties_typeProperties_server": {
+						"value": "[parameters('ls_azuredb_csv_meta_properties_typeProperties_server')]"
+					},
+					"ls_azuredb_csv_meta_properties_typeProperties_database": {
+						"value": "[parameters('ls_azuredb_csv_meta_properties_typeProperties_database')]"
+					},
+					"ls_azuredb_csv_meta_properties_typeProperties_userName": {
+						"value": "[parameters('ls_azuredb_csv_meta_properties_typeProperties_userName')]"
+					},
+					"ls_azuredb_csvexcel_properties_typeProperties_server": {
+						"value": "[parameters('ls_azuredb_csvexcel_properties_typeProperties_server')]"
+					},
+					"ls_azuredb_csvexcel_properties_typeProperties_database": {
+						"value": "[parameters('ls_azuredb_csvexcel_properties_typeProperties_database')]"
+					},
+					"ls_azuredb_csvexcel_properties_typeProperties_userName": {
+						"value": "[parameters('ls_azuredb_csvexcel_properties_typeProperties_userName')]"
+					},
+					"ls_get_job_details_properties_typeProperties_server": {
+						"value": "[parameters('ls_get_job_details_properties_typeProperties_server')]"
+					},
+					"ls_get_job_details_properties_typeProperties_database": {
+						"value": "[parameters('ls_get_job_details_properties_typeProperties_database')]"
+					},
+					"ls_get_job_details_properties_typeProperties_userName": {
+						"value": "[parameters('ls_get_job_details_properties_typeProperties_userName')]"
+					}
+				}
+			},
+			"dependsOn": [
+				"[resourceId('Microsoft.Resources/deployments', 'dfecomdev_ArmTemplate_0')]"
+			]
+		},
+		{
+			"name": "dfecomdev_ArmTemplate_2",
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2024-03-01",
+			"properties": {
+				"mode": "incremental",
+				"templateLink": {
+					"uri": "[concat(parameters('containerUri'), '/ArmTemplate_2.json', parameters('containerSasToken'))]",
+					"contentVersion": "1.0.0.0"
+				},
+				"parameters": {
+					"factoryName": {
+						"value": "[parameters('factoryName')]"
+					},
+					"ls_sqlserver_parquet_password": {
+						"value": "[parameters('ls_sqlserver_parquet_password')]"
+					},
+					"ls_sqlserver_parquet_properties_typeProperties_server": {
+						"value": "[parameters('ls_sqlserver_parquet_properties_typeProperties_server')]"
+					},
+					"ls_sqlserver_parquet_properties_typeProperties_database": {
+						"value": "[parameters('ls_sqlserver_parquet_properties_typeProperties_database')]"
+					},
+					"ls_sqlserver_parquet_properties_typeProperties_userName": {
+						"value": "[parameters('ls_sqlserver_parquet_properties_typeProperties_userName')]"
+					},
+					"eventtrigger_properties_typeProperties_scope": {
+						"value": "[parameters('eventtrigger_properties_typeProperties_scope')]"
+					}
+				}
+			},
+			"dependsOn": [
+				"[resourceId('Microsoft.Resources/deployments', 'dfecomdev_ArmTemplate_1')]"
+			]
+		},
+		{
+			"name": "dfecomdev_ArmTemplate_3",
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2024-03-01",
+			"properties": {
+				"mode": "incremental",
+				"templateLink": {
+					"uri": "[concat(parameters('containerUri'), '/ArmTemplate_3.json', parameters('containerSasToken'))]",
+					"contentVersion": "1.0.0.0"
+				},
+				"parameters": {
+					"factoryName": {
+						"value": "[parameters('factoryName')]"
+					},
+					"Tr_sample_csv_properties_PL1_MASTER_parameters_Trigger": {
+						"value": "[parameters('Tr_sample_csv_properties_PL1_MASTER_parameters_Trigger')]"
+					}
+				}
+			},
+			"dependsOn": [
+				"[resourceId('Microsoft.Resources/deployments', 'dfecomdev_ArmTemplate_2')]"
+			]
+		}
+	]
+}

@@ -1,0 +1,180 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "dfecomdev"
+		},
+		"ds_bulk_parquet_sink_accountKey": {
+			"value": ""
+		},
+		"ls_azure_sql_password": {
+			"value": ""
+		},
+		"ls_azure_sr_password": {
+			"value": ""
+		},
+		"ls_azuredb_csv_meta_password": {
+			"value": ""
+		},
+		"ls_azuredb_csvexcel_password": {
+			"value": ""
+		},
+		"ls_bulk_parquet_accountKey": {
+			"value": ""
+		},
+		"ls_csv_paquet_accountKey": {
+			"value": ""
+		},
+		"ls_csv_parquet_sink_accountKey": {
+			"value": ""
+		},
+		"ls_excel_parquet_accountKey": {
+			"value": ""
+		},
+		"ls_excel_parquet_sink_accountKey": {
+			"value": ""
+		},
+		"ls_get_job_details_password": {
+			"value": ""
+		},
+		"ls_json_parquet_accountKey": {
+			"value": ""
+		},
+		"ls_json_parquet_sink_accountKey": {
+			"value": ""
+		},
+		"ls_restapi_parquet_sink_accountKey": {
+			"value": ""
+		},
+		"ls_sftp_parquet_accountKey": {
+			"value": ""
+		},
+		"ls_sftp_parquet_sink_accountKey": {
+			"value": ""
+		},
+		"ls_snowflake_parquet_password": {
+			"value": ""
+		},
+		"ls_snowflake_src_connectionString": {
+			"value": ""
+		},
+		"ls_snowflake_src_sink_accountKey": {
+			"value": ""
+		},
+		"ls_sqlserver_parquet_password": {
+			"value": ""
+		},
+		"ls_sqlserver_parquet_sink_accountKey": {
+			"value": ""
+		},
+		"ds_bulk_parquet_sink_properties_typeProperties_url": {
+			"value": "https://adlsecomprojectsrcdev.dfs.core.windows.net/"
+		},
+		"ls_azure_sql_properties_typeProperties_server": {
+			"value": "sql-srvr-ecom-dev.database.windows.net"
+		},
+		"ls_azure_sql_properties_typeProperties_database": {
+			"value": "sql-db-vb-dev"
+		},
+		"ls_azure_sql_properties_typeProperties_userName": {
+			"value": "access-data-dev"
+		},
+		"ls_azure_sr_properties_typeProperties_server": {
+			"value": "sql-srvr-ecom-dev.database.windows.net"
+		},
+		"ls_azure_sr_properties_typeProperties_database": {
+			"value": "sql-db-vb-dev"
+		},
+		"ls_azure_sr_properties_typeProperties_userName": {
+			"value": "access-data-dev"
+		},
+		"ls_azuredb_csv_meta_properties_typeProperties_server": {
+			"value": "sql-srvr-ecom-dev.database.windows.net"
+		},
+		"ls_azuredb_csv_meta_properties_typeProperties_database": {
+			"value": "sql-db-vb-dev"
+		},
+		"ls_azuredb_csv_meta_properties_typeProperties_userName": {
+			"value": "access-data-dev"
+		},
+		"ls_azuredb_csvexcel_properties_typeProperties_server": {
+			"value": "sql-srvr-ecom-dev.database.windows.net"
+		},
+		"ls_azuredb_csvexcel_properties_typeProperties_database": {
+			"value": "sql-db-vb-dev"
+		},
+		"ls_azuredb_csvexcel_properties_typeProperties_userName": {
+			"value": "access-data-dev"
+		},
+		"ls_bulk_parquet_properties_typeProperties_url": {
+			"value": "https://adlsecomprojectraw.dfs.core.windows.net/"
+		},
+		"ls_csv_paquet_properties_typeProperties_url": {
+			"value": "https://adlsecomprojectraw.dfs.core.windows.net/"
+		},
+		"ls_csv_parquet_sink_properties_typeProperties_url": {
+			"value": "https://adlsecomprojectsrcdev.dfs.core.windows.net/"
+		},
+		"ls_excel_parquet_properties_typeProperties_url": {
+			"value": "https://adlsecomprojectraw.dfs.core.windows.net/"
+		},
+		"ls_excel_parquet_sink_properties_typeProperties_url": {
+			"value": "https://adlsecomprojectsrcdev.dfs.core.windows.net/"
+		},
+		"ls_get_job_details_properties_typeProperties_server": {
+			"value": "sql-srvr-ecom-dev.database.windows.net"
+		},
+		"ls_get_job_details_properties_typeProperties_database": {
+			"value": "sql-db-vb-dev"
+		},
+		"ls_get_job_details_properties_typeProperties_userName": {
+			"value": "access-data-dev"
+		},
+		"ls_json_parquet_properties_typeProperties_url": {
+			"value": "https://adlsecomprojectraw.dfs.core.windows.net/"
+		},
+		"ls_json_parquet_sink_properties_typeProperties_url": {
+			"value": "https://adlsecomprojectsrcdev.dfs.core.windows.net/"
+		},
+		"ls_restapi_parquet_sink_properties_typeProperties_url": {
+			"value": "https://adlsecomprojectsrcdev.dfs.core.windows.net/"
+		},
+		"ls_restapi_pqrquet_properties_typeProperties_url": {
+			"value": "https://retoolapi.dev/fPl4Jn/data"
+		},
+		"ls_sftp_parquet_properties_typeProperties_url": {
+			"value": "https://adlsecomprojectraw.dfs.core.windows.net/"
+		},
+		"ls_sftp_parquet_sink_properties_typeProperties_url": {
+			"value": "https://adlsecomprojectsrcdev.dfs.core.windows.net/"
+		},
+		"ls_snowflake_parquet_properties_typeProperties_database": {
+			"value": "DBAZURESNOW"
+		},
+		"ls_snowflake_parquet_sink_sasUri": {
+			"value": ""
+		},
+		"ls_snowflake_src_sink_properties_typeProperties_url": {
+			"value": "https://adlsecomprojectsrcdev.dfs.core.windows.net/"
+		},
+		"ls_sqlserver_parquet_properties_typeProperties_server": {
+			"value": "HARRIES"
+		},
+		"ls_sqlserver_parquet_properties_typeProperties_database": {
+			"value": "ecomproject"
+		},
+		"ls_sqlserver_parquet_properties_typeProperties_userName": {
+			"value": "harish"
+		},
+		"ls_sqlserver_parquet_sink_properties_typeProperties_url": {
+			"value": "https://adlsecomprojectsrcdev.dfs.core.windows.net/"
+		},
+		"Tr_sample_csv_properties_PL1_MASTER_parameters_Trigger": {
+			"value": "Tr_sample_csv"
+		},
+		"eventtrigger_properties_typeProperties_scope": {
+			"value": "/subscriptions/8cba6eac-8148-40ab-811d-b65b0489221f/resourceGroups/rg_ecom_project/providers/Microsoft.Storage/storageAccounts/blobstorageecomprjdev"
+		}
+	}
+}
