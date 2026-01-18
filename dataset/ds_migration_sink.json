@@ -1,0 +1,26 @@
+{
+	"name": "ds_migration_sink",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_migration_sink",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"p_folder_path": {
+				"type": "string",
+				"defaultValue": "raw/orders/load_date=@{formatDateTime(utcNow(),'yyyy-MM-dd')}"
+			}
+		},
+		"annotations": [],
+		"type": "Parquet",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"folderPath": "customers",
+				"fileSystem": "raw"
+			},
+			"compressionCodec": "snappy"
+		},
+		"schema": []
+	}
+}

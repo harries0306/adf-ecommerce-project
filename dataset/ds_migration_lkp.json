@@ -1,0 +1,12 @@
+{
+	"name": "ds_migration_lkp",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ds_migration_lkp",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": []
+	}
+}
