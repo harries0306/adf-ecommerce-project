@@ -57,7 +57,7 @@
 						"type": "DatasetReference",
 						"parameters": {
 							"p_folder_path": {
-								"value": "raw/pipeline().parameters.p1_table_name@{formatDateTime(utcNow(),'yyyy-MM-dd')}\n\n",
+								"value": "raw/olist_products_dataset/load_date=@{formatDateTime(utcNow(),'yyyy-MM-dd')}\n",
 								"type": "Expression"
 							}
 						}
