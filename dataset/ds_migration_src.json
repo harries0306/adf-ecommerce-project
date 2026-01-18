@@ -15,10 +15,8 @@
 		"type": "SqlServerTable",
 		"schema": [],
 		"typeProperties": {
-			"table": {
-				"value": "@dataset().p_table_name\n",
-				"type": "Expression"
-			}
+			"schema": "dbo",
+			"table": "olist_orders_dataset"
 		}
 	}
 }

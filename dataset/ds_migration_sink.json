@@ -16,10 +16,8 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
-				"fileName": {
-					"value": "@dataset().p_folder_path",
-					"type": "Expression"
-				}
+				"folderPath": "customers",
+				"fileSystem": "raw"
 			},
 			"compressionCodec": "snappy"
 		},
