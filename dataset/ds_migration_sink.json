@@ -7,7 +7,8 @@
 		},
 		"parameters": {
 			"p_folder_path": {
-				"type": "string"
+				"type": "string",
+				"defaultValue": "raw/orders/load_date=@{formatDateTime(utcNow(),'yyyy-MM-dd')}"
 			}
 		},
 		"annotations": [],
