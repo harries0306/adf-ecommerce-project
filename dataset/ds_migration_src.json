@@ -1,0 +1,18 @@
+{
+	"name": "ds_migration_src",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_migration_src",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"p_table_name": {
+				"type": "string",
+				"defaultValue": "@dataset().p_table_name"
+			}
+		},
+		"annotations": [],
+		"type": "SqlServerTable",
+		"schema": []
+	}
+}
