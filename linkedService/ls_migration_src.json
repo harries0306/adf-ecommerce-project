@@ -1,0 +1,21 @@
+{
+	"name": "ls_migration_src",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "SqlServer",
+		"typeProperties": {
+			"server": "HARRIES",
+			"database": "ecomproject",
+			"encrypt": "optional",
+			"trustServerCertificate": false,
+			"authenticationType": "SQL",
+			"userName": "harish",
+			"encryptedCredential": "eyJDcmVkZW50aWFsSWQiOiIzMDBmYzg4MS02YjgwLTQ4ZmMtOTE5Ny1mM2I1MGNjNTUwMjAiLCJWZXJzaW9uIjoiMi4wIiwiQ2xhc3NUeXBlIjoiTWljcm9zb2Z0LkRhdGFQcm94eS5Db3JlLkludGVyU2VydmljZURhdGFDb250cmFjdC5DcmVkZW50aWFsU1UwNkNZMTQifQ=="
+		},
+		"connectVia": {
+			"referenceName": "selfhosted-integrationRuntime1",
+			"type": "IntegrationRuntimeReference"
+		}
+	}
+}
