@@ -8,6 +8,9 @@
 		"ds_bulk_parquet_sink_accountKey": {
 			"value": ""
 		},
+		"ds_migration_lkp_password": {
+			"value": ""
+		},
 		"ls_azure_sql_password": {
 			"value": ""
 		},
@@ -44,6 +47,12 @@
 		"ls_json_parquet_sink_accountKey": {
 			"value": ""
 		},
+		"ls_migration_sink_accountKey": {
+			"value": ""
+		},
+		"ls_migration_src_password": {
+			"value": ""
+		},
 		"ls_restapi_parquet_sink_accountKey": {
 			"value": ""
 		},
@@ -70,6 +79,15 @@
 		},
 		"ds_bulk_parquet_sink_properties_typeProperties_url": {
 			"value": "https://adlsecomprojectsrcdev.dfs.core.windows.net/"
+		},
+		"ds_migration_lkp_properties_typeProperties_server": {
+			"value": "sql-srvr-ecom-dev.database.windows.net"
+		},
+		"ds_migration_lkp_properties_typeProperties_database": {
+			"value": "sql-db-vb-dev"
+		},
+		"ds_migration_lkp_properties_typeProperties_userName": {
+			"value": "access-data-dev"
 		},
 		"ls_azure_sql_properties_typeProperties_server": {
 			"value": "sql-srvr-ecom-dev.database.windows.net"
@@ -136,6 +154,18 @@
 		},
 		"ls_json_parquet_sink_properties_typeProperties_url": {
 			"value": "https://adlsecomprojectsrcdev.dfs.core.windows.net/"
+		},
+		"ls_migration_sink_properties_typeProperties_url": {
+			"value": "https://adlsecomprojectsrcdev.dfs.core.windows.net"
+		},
+		"ls_migration_src_properties_typeProperties_server": {
+			"value": "HARRIES"
+		},
+		"ls_migration_src_properties_typeProperties_database": {
+			"value": "ecomproject"
+		},
+		"ls_migration_src_properties_typeProperties_userName": {
+			"value": "harish"
 		},
 		"ls_restapi_parquet_sink_properties_typeProperties_url": {
 			"value": "https://adlsecomprojectsrcdev.dfs.core.windows.net/"
