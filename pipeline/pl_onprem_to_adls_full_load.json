@@ -25,7 +25,7 @@
 					"source": {
 						"type": "SqlServerSource",
 						"sqlReaderQuery": {
-							"value": "@SELECT *\nFROM orders\nWHERE last_updated_ts > pipeline().parameters.v_last_watermark",
+							"value": "@SELECT * FROM variables('p1_table_name') WHERE last_updated_ts > activity('Lookup_Watermark').output.firstRow",
 							"type": "Expression"
 						},
 						"queryTimeout": "02:00:00",
