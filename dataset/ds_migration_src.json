@@ -13,10 +13,6 @@
 		},
 		"annotations": [],
 		"type": "SqlServerTable",
-		"schema": [],
-		"typeProperties": {
-			"schema": "dbo",
-			"table": "olist_orders_dataset"
-		}
+		"schema": []
 	}
 }
